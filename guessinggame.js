@@ -7,23 +7,22 @@ let points = 0;
 
 function guessTheNumber(theRange) {
   let userGuess = parseInt(prompt(`Guess a number in ${theRange}`));
-  let randomNumber = Math.floor(Math.random() * theRange) + 1
 
+  function theRange(minNum, maxNum) {
+    let randomNumber = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
+    return randomNumber;
+  };
+  
   if (userGuess === randomNumber) {
-    console.log(`Congratulations ${username}! You won! You can move on to the next stage!`)
-    points ++;
-    let count = 0
-    for (i = 0; i > count; i++) {
-      randomNumber = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
       nextGuess = parseInt(prompt('Guess another number: '));
       if (randomNumber === nextGuess) {
-            console.log(`Congratulations ${username}! You won! You can move on to the next stage!`)
-            points++;
+        console.log(`Congratulations ${username}! You won! You can move on to the next stage!`);
+        points++;
       } else {
-        console.log("Looks like you lost :( Try again.")
+        console.log("Looks like you lost :( Try again.");
       }
+    }
   }
-}
 }
 
 guessTheNumber(theRange)
