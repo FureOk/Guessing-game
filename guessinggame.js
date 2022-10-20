@@ -12,17 +12,17 @@ function guessTheNumber(theRange) {
     let randomNumber = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
     return randomNumber;
   };
-  
+
   if (userGuess === randomNumber) {
-      nextGuess = parseInt(prompt('Guess another number: '));
-      if (randomNumber === nextGuess) {
-        console.log(`Congratulations ${username}! You won! You can move on to the next stage!`);
-        points++;
-      } else {
-        console.log("Looks like you lost :( Try again.");
-      }
+    nextGuess = parseInt(prompt('Guess another number: '));
+    if (randomNumber === nextGuess) {
+      console.log(`Congratulations ${username}! You won! You can move on to the next stage!`);
+      points++;
+    } else {
+      console.log("Looks like you lost :( Try again.");
     }
   }
-}
+};
 
-guessTheNumber(theRange)
+
+guessTheNumber(theRange);
