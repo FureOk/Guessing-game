@@ -14,7 +14,7 @@ function guessTheNumber(theRange) {
   let userGuess = parseInt(prompt(`Guess a number in ${theRange}`));
   let points = 0;
   let count = 5;
-  for(i = 0; i < count; count ++) {
+  for(let i = 0; i < count; count ++) {
     if (userGuess === randomNumber) {
       console.log(`Congratulations ${username}! You won! You can move on to the next stage!`);
       points++;
