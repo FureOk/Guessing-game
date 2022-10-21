@@ -5,13 +5,13 @@ const minNum = 1;
 let maxNum = 2;
 let points = 0;
 
-function guessTheNumber(theRange) {
-  let userGuess = parseInt(prompt(`Guess a number in ${theRange}`));
-
-  function theRange(minNum, maxNum) {
+function theRange(minNum, maxNum) {
     let randomNumber = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
     return randomNumber;
   };
+
+function guessTheNumber(theRange) {
+  let userGuess = parseInt(prompt(`Guess a number in ${theRange}`));
 
   if (userGuess === randomNumber) {
     nextGuess = parseInt(prompt('Guess another number: '));
